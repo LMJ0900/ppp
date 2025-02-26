@@ -1,0 +1,83 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(173, 173, 240);
+}
+.logo{
+ display: flex;
+ width: 20%;
+ justify-content: center;
+ align-items: center;
+
+}
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.menu li{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu a{
+    display: block; /* 기본적으로 inline이므로 block으로 변경 */
+    width: 100%; /* li 크기만큼 확장 */
+    padding: 1rem 2rem;
+    text-align: center;
+}
+.menu li:hover{
+    background-color: red;
+    border-radius: 4px;
+}
+.logo2{
+    display: flex;
+    width: 10%;
+    justify-content: center;
+}
+.logo2 li{
+    padding: 1rem 1rem;
+}
+.logo2 i{
+    font-size: 2rem;
+}
+.mainButton{
+    position: absolute;
+    right: 32px;
+    top: -5px;
+    font-size: 24px;
+    display: none;
+}
+
+
+@media screen and (max-width: 48rem){
+     .header {
+        flex-direction: column;
+    }
+    .menu{
+        display: none;
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+    }
+    .menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .logo2{
+        display: none;
+        width: 100%;
+    }
+    .mainButton{
+        display: block;
+    }
+    .menu.active {
+        display: block; /* 기존에 숨겨져 있다면 보이도록 */
+    }
+    
+    .logo2.active {
+        display: flex; /* 기존에 숨겨져 있다면 보이도록 */
+    }
+}
